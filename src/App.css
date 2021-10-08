@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: white;
+  font-family: sans-serif;
+  line-height: 1.5;
+  font-size: 1.25rem;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: 0.1rem;
+  text-transform: capitalize;
+  line-height: 1.25;
+  padding-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+
+button {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  margin: 0.25rem;
+  border: gray 1px solid;
+  color: gray;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.2);
+  font-size: 0.8rem;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: scale(0.98);
+  border: black 1px solid;
+  color: black;
+}
+
+button:focus {
+  outline: none;
+}
+
+label {
+  letter-spacing: 0.1rem;
+  text-transform: capitalize;
+  line-height: 1.25;
+  padding-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.todo-list {
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 90%;
+  margin: 1rem auto;
+  padding: 0.75rem;
+  border: gray 1px solid;
+  border-radius: 5px;
+}
+
+.todo-header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0.75rem;
+  border-bottom: rgb(184, 184, 184) 1px solid;
+  /* border: black 1px solid; */
+}
+
+.todo-header input {
+  width: 80%;
+  margin-top: 0.25rem;
+  margin-left: 10px;
+  height: 2rem;
+  border-radius: 5px;
+  padding: 1rem 0rem;
+  font-size: 1.2rem;
+  outline: none;
+}
+
+.todo-form {
+  display: flex;
+  width: 80%;
+}
+
+.todo-form span {
+  display: inline-block;
+  width: 55px;
+}
+
+.todos-container {
+  margin: 1rem 0;
+}
+
+.todo-text {
+  width: 70%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.todo-text input[type="text"] {
+  width: 80%;
+  margin-top: 0.25rem;
+  margin-left: 10px;
+  height: 2rem;
+  border-radius: 5px;
+  padding: 1.2rem 0.5rem;
+  font-size: 1.2rem;
+  outline: none;
+}
+
+label {
+  padding: 0;
+  cursor: pointer;
+}
+input[type="checkbox"] {
+  display: none;
+}
+input[type="checkbox"] + span {
+  display: inline-block;
+  padding-left: 26px;
+  line-height: 20px;
+  background: url(https://i.imgur.com/bZM5Itd.png) no-repeat left top;
+  user-select: none;
+}
+input[type="checkbox"]:checked + span {
+  background: url(https://i.imgur.com/JWm4WKA.png) no-repeat left top;
+}
+
+label {
+  letter-spacing: 0.1rem;
+  text-transform: capitalize;
+  line-height: 1.25;
+  padding-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.todo-text label {
+  margin-left: 5px;
+}
+
+.todos {
+  list-style-type: none;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: flex-end;
+  min-width: 35%;
+}
+
+.edit {
+  border: none;
+  color: rgba(145, 224, 255, 0.7);
+}
+
+.edit:hover {
+  border: none;
+  color: rgba(145, 224, 255, 1);
+}
+
+.delete {
+  border: none;
+  color: rgba(255, 74, 74, 0.7);
+}
+
+.delete:hover {
+  border: none;
+  color: rgba(255, 74, 74, 1);
+}
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  margin-bottom: 0.25rem;
+  border-bottom: rgb(184, 184, 184) 1px solid;
+}
+
+.todo-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+@media screen and (min-width: 768px) {
+  .todo-list {
+    max-width: 60%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .todo-list {
+    max-width: 40%;
+  }
+}
