@@ -67,7 +67,6 @@ button:focus {
   justify-content: space-between;
   padding-bottom: 0.75rem;
   border-bottom: rgb(184, 184, 184) 1px solid;
-  /* border: black 1px solid; */
 }
 
 .todo-header input {

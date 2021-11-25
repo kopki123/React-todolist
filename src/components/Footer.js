@@ -1,6 +1,11 @@
 import React from "react";
+import { useGlobalContext } from "../context";
 
-function Footer({ todos, clearAllTodos }) {
+function Footer() {
+  const value = useGlobalContext();
+  const [todos] = value.todos;
+  const clearAllTodos = value.clearAllTodos;
+
   return (
     <footer className="todo-footer">
       <h4>

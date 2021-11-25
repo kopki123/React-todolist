@@ -1,29 +1,16 @@
 import React from "react";
 import Todo from "./Todo";
+import { useGlobalContext } from "../context";
 
-function List({
-  todos,
-  handleDelete,
-  handleCheck,
-  handleEdit,
-  editTodo,
-  editBlur,
-}) {
+function List() {
+  const value = useGlobalContext();
+  const [todos] = value.todos;
+
   return (
     <main className="todos-container">
       <ul className="todos">
         {todos.map((todo) => {
-          return (
-            <Todo
-              key={todo.id}
-              {...todo}
-              handleDelete={handleDelete}
-              handleCheck={handleCheck}
-              handleEdit={handleEdit}
-              editTodo={editTodo}
-              editBlur={editBlur}
-            />
-          );
+          return <Todo key={todo.id} {...todo} />;
         })}
       </ul>
     </main>

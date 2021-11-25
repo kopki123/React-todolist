@@ -1,19 +1,10 @@
 import React, { useRef, useEffect } from "react";
+import { useGlobalContext } from "../context";
 
-function Todo(props) {
-  const {
-    id,
-    title,
-    isDone,
-    isEdit,
-    handleDelete,
-    handleCheck,
-    handleEdit,
-    editTodo,
-    editBlur,
-  } = props;
-
+function Todo({ id, title, isDone, isEdit }) {
   const editRef = useRef(null);
+  const { handleDelete, handleCheck, handleEdit, editBlur, editTodo } =
+    useGlobalContext();
 
   useEffect(() => {
     if (isEdit) {
